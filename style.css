@@ -1,0 +1,223 @@
+/* Simple Calculator Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.calculator {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.2em;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+}
+
+.btn-add {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.btn-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-subtract {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.btn-subtract:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+}
+
+.btn-clear {
+    background: #6c757d;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.btn-clear:hover {
+    background: #5a6268;
+}
+
+.result-container {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.result-container h2 {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.result {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #667eea;
+    border: 3px solid #667eea;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-container {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 2px solid #ddd;
+}
+
+.history-container h3 {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.history-list {
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.history-list li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    color: #666;
+    font-size: 0.95em;
+}
+
+.history-list li:last-child {
+    border-bottom: none;
+}
+
+.history-list:empty::before {
+    content: "No calculations yet";
+    color: #999;
+    font-style: italic;
+}
+
+.info {
+    text-align: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    color: #666;
+}
+
+.info a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .result {
+        font-size: 2em;
+    }
+}
+
+/* Made with Bob */
