@@ -6,6 +6,7 @@ const number1Input = document.getElementById('number1');
 const number2Input = document.getElementById('number2');
 const addBtn = document.getElementById('addBtn');
 const subtractBtn = document.getElementById('subtractBtn');
+const multiplyBtn = document.getElementById('multiplyBtn');
 const resultDisplay = document.getElementById('result');
 const historyList = document.getElementById('history');
 const clearHistoryBtn = document.getElementById('clearHistory');
@@ -31,6 +32,16 @@ function add(a, b) {
  */
 function subtract(a, b) {
     return a - b;
+}
+
+/**
+ * Multiply two numbers together
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @returns {number} The product of a and b
+ */
+function multiply(a, b) {
+    return a * b;
 }
 
 /**
@@ -114,6 +125,16 @@ function handleSubtract() {
 }
 
 /**
+ * Handle multiplication button click
+ */
+function handleMultiply() {
+    const { num1, num2 } = getInputNumbers();
+    const result = multiply(num1, num2);
+    displayResult(result);
+    addToHistory(`${num1} × ${num2} = ${result}`);
+}
+
+/**
  * Handle Enter key press in input fields
  * @param {KeyboardEvent} event - The keyboard event
  */
@@ -126,6 +147,7 @@ function handleKeyPress(event) {
 // Add event listeners to buttons
 addBtn.addEventListener('click', handleAdd);
 subtractBtn.addEventListener('click', handleSubtract);
+multiplyBtn.addEventListener('click', handleMultiply);
 clearHistoryBtn.addEventListener('click', clearHistory);
 
 // Add event listeners for Enter key

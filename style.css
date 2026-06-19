@@ -108,6 +108,15 @@ input[type="number"]:focus {
     box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
 }
 
+.btn-multiply {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.btn-multiply:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+}
+
 .btn-clear {
     background: #6c757d;
     padding: 10px 20px;
