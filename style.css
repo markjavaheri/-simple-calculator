@@ -117,6 +117,15 @@ input[type="number"]:focus {
     box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
 }
 
+.btn-divide {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.btn-divide:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 233, 123, 0.4);
+}
+
 .btn-clear {
     background: #6c757d;
     padding: 10px 20px;

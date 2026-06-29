@@ -7,6 +7,7 @@ const number2Input = document.getElementById('number2');
 const addBtn = document.getElementById('addBtn');
 const subtractBtn = document.getElementById('subtractBtn');
 const multiplyBtn = document.getElementById('multiplyBtn');
+const divideBtn = document.getElementById('divideBtn');
 const resultDisplay = document.getElementById('result');
 const historyList = document.getElementById('history');
 const clearHistoryBtn = document.getElementById('clearHistory');
@@ -42,6 +43,17 @@ function subtract(a, b) {
  */
 function multiply(a, b) {
     return a * b;
+}
+
+/**
+ * Divide first number by second number
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @returns {number|string} The quotient of a and b, or error if dividing by zero
+ */
+function divide(a, b) {
+    if (b === 0) return 'Error: ÷ 0';
+    return a / b;
 }
 
 /**
@@ -135,6 +147,18 @@ function handleMultiply() {
 }
 
 /**
+ * Handle division button click
+ */
+function handleDivide() {
+    const { num1, num2 } = getInputNumbers();
+    const result = divide(num1, num2);
+    displayResult(result);
+    if (result !== 'Error: ÷ 0') {
+        addToHistory(`${num1} ÷ ${num2} = ${result}`);
+    }
+}
+
+/**
  * Handle Enter key press in input fields
  * @param {KeyboardEvent} event - The keyboard event
  */
@@ -148,6 +172,7 @@ function handleKeyPress(event) {
 addBtn.addEventListener('click', handleAdd);
 subtractBtn.addEventListener('click', handleSubtract);
 multiplyBtn.addEventListener('click', handleMultiply);
+divideBtn.addEventListener('click', handleDivide);
 clearHistoryBtn.addEventListener('click', clearHistory);
 
 // Add event listeners for Enter key
